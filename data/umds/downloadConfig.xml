@@ -1,0 +1,41 @@
+<Config>
+  <HostConfig>
+    <ESX4xUpdateUrl id="1">https://hostupdate.vmware.com/software/VUM/PRODUCTION/main/vmw-depot-index.xml</ESX4xUpdateUrl>
+    <ESX4xUpdateUrl id="2">https://hostupdate.vmware.com/software/VUM/PRODUCTION/addon-main/vmw-depot-index.xml</ESX4xUpdateUrl>
+    <ESX4xUpdateUrl id="3">https://hostupdate.vmware.com/software/VUM/PRODUCTION/iovp-main/vmw-depot-index.xml</ESX4xUpdateUrl>
+    <ESX4xUpdateUrl id="4">https://hostupdate.vmware.com/software/VUM/PRODUCTION/vmtools-main/vmw-depot-index.xml</ESX4xUpdateUrl>
+    <ESXThirdPartyUpdateUrl id="0000">http://vibsdepot.hpe.com/hpe/hpe-index-ecli-670.xml</ESXThirdPartyUpdateUrl>
+  </HostConfig>
+  <contentSettings>
+    <hostExclude id="0000">embeddedEsx-7.0-INTL</hostExclude>
+    <hostExclude id="0001">embeddedEsx-7.0.3-INTL</hostExclude>
+    <hostExclude id="0002">embeddedEsx-6.9.1-INTL</hostExclude>
+    <hostExclude id="0003">embeddedEsx-6.5.0-INTL</hostExclude>
+    <hostInclude id="0002">embeddedEsx-6.7.0-INTL</hostInclude>
+    <hostUpdateEnabled>true</hostUpdateEnabled>
+  </contentSettings>
+  <exportStore/>
+  <langs>ENU</langs>
+  <log>
+    <components>
+      <lib.vdb.vdb>
+        <level>info</level>
+      </lib.vdb.vdb>
+      <lib.vdb.vdbStatement>
+        <level>info</level>
+      </lib.vdb.vdbStatement>
+    </components>
+    <level>verbose</level>
+    <memoryLevel>error</memoryLevel>
+    <name>vmware-downloadService</name>
+    <outputToConsole>false</outputToConsole>
+  </log>
+  <patchStore>/var/lib/vmware-umds</patchStore>
+  <proxySettings>
+    <password/>
+    <proxyPort>0</proxyPort>
+    <proxyServer/>
+    <useProxyServer>0</useProxyServer>
+    <username/>
+  </proxySettings>
+</Config>
