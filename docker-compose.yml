@@ -1,0 +1,22 @@
+version: "3"
+services:
+  umds:
+    build: .
+    image: umds
+    restart: always
+    volumes:
+      - ./data/umds/download:/var/lib/vmware-umds
+      - ./data/umds/downloadConfig.xml:/usr/local/vmware-umds/bin/downloadConfig.xml:ro
+    environment:
+      - SCHEDULEDTIME=19:00
+      - TZ=Europe/Oslo
+  web:
+    image: nginx:latest
+    restart: always
+    volumes:
+      - ./data/umds/download:/usr/share/nginx/html:ro
+      - ./data/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - 80:80
+    environment:
+      - TX=Europe/Oslo
