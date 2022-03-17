@@ -9,4 +9,4 @@ Config added as example under `./data/umds/downloadConfig.xml` Set up to downloa
 [Documentation](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere-lifecycle-manager.doc/GUID-7D29B608-812B-41C4-868E-9D2006CEEBF9.html)
 
 ## Nginx
-Patches made avilable to vCenter with Nginx. Usin default config except `autoindex on`, to allow directory listing.
+Patches made available to vCenter with Nginx. Usin default config except `autoindex on`, to allow directory listing.
