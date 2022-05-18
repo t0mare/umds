@@ -19,4 +19,4 @@ services:
     ports:
       - 80:80
     environment:
-      - TX=Europe/Oslo
+      - TZ=Europe/Oslo
