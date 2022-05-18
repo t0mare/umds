@@ -3,7 +3,7 @@ services:
   umds:
     build: .
     image: umds
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./data/umds/download:/var/lib/vmware-umds
       - ./data/umds/downloadConfig.xml:/usr/local/vmware-umds/bin/downloadConfig.xml:ro
@@ -12,7 +12,7 @@ services:
       - TZ=Europe/Oslo
   web:
     image: nginx:latest
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./data/umds/download:/usr/share/nginx/html:ro
       - ./data/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
