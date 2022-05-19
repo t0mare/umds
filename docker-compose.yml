@@ -1,7 +1,7 @@
 version: "3"
 services:
   umds:
-    build: .
+    build: ./docker/.
     image: umds
     restart: unless-stopped
     volumes:
