@@ -3,6 +3,7 @@ services:
   umds:
     build: ./docker/.
     image: umds
+    container_name: umds
     restart: unless-stopped
     volumes:
       - ./data/umds/download:/var/lib/vmware-umds
@@ -12,6 +13,7 @@ services:
       - TZ=Europe/Oslo
   web:
     image: nginx:latest
+    container_name: umds-web
     restart: unless-stopped
     volumes:
       - ./data/umds/download:/usr/share/nginx/html:ro
